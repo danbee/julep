@@ -1,0 +1,23 @@
+.list {
+  list-style: none;
+  padding: 0;
+  li {
+    a {
+      background: #ffffff; /* Old browsers */
+      @include linear-gradient(white, #f1f1f1);
+      text-shadow: 0 2px 2px white;
+      border: {
+        style: solid;
+        width: 1px 0;
+        color: #ffffff white #cccccc;
+      }
+      display: block;
+      padding: 0.7em 1em;
+      text-decoration: none;
+    }
+  }
+}
+
+@mixin list() {
+  @extend .list;
+}
