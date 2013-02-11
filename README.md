@@ -1,6 +1,6 @@
 # Julep
 
-SASS/SCSS mixins for building mobile web applications.
+SASS/SCSS mixins for building mobile web applications. Designed to keep your markup clean and semantic and free of cruft.
 
 ## Requirements
 
@@ -16,9 +16,52 @@ SASS/SCSS mixins for building mobile web applications.
 
 Simply include the appropriate mixin in your stylesheet. E.g.
 
-    header {
-      @include header($color);
-    }
+### Header
+
+```html
+<header>
+  <h1>App Name</h1>
+</header>
+```
+
+```css
+header {
+  @include header($color);
+}
+```
+
+### Tab Bar
+
+```html
+<footer>
+  <ul>
+    <li><a href="#" id="one">One</a></li>
+    <li><a href="#" id="two">Two</a></li>
+  </ul>
+</footer>
+```
+
+```css
+footer {
+  @include tabbar;
+}
+```
+
+### Lists
+
+```html
+<ul>
+  <li>First Item</li>
+  <li>Second Item</li>
+  <li>Third Item</li>
+</ul>
+```
+
+```css
+ul {
+  @include list;
+}
+```
 
 ## Contributing
 
