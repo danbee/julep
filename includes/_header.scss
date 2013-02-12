@@ -1,7 +1,7 @@
 .header {
   position: fixed;
   width: 100%;
-  @include box-shadow(0 2px 3px rgba(0, 0, 0, 0.5));
+  @include box-shadow(0 2px 3px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2));
   color: white;
   height: 2.5em;
   padding-top: 0.45em;
@@ -9,13 +9,12 @@
     text-align: center;
     font-size: 1.3em;
     font-weight: normal;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   }
 }
 
 @mixin header($color) {
   background: $color;
-  border-bottom: 1px solid darken($color, 15%);
   @include linear-gradient(lighten($color, 30%), darken($color, 5%));
   @extend .header;
 }
