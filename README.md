@@ -32,6 +32,8 @@ header {
 
 ### Tab Bar
 
+Pass the number of buttons in your tab bar to the mixin.
+
 ```html
 <footer>
   <ul>
@@ -43,7 +45,7 @@ header {
 
 ```css
 footer {
-  @include tabbar;
+  @include tabbar(2);
 }
 ```
 
