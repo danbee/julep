@@ -1,0 +1,11 @@
+// Set some sensible defaults.
+* {
+  margin: 0;
+  padding: 0;
+  @include box-sizing(border-box);
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+}
