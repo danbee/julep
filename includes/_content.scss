@@ -1,4 +1,5 @@
 // Set appropriate padding on content.
+// This is to leave space for the header and the tab bar.
 @mixin content($args...) {
   padding: 0;
   @each $arg in $args {
