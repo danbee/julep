@@ -1,0 +1,12 @@
+// Set appropriate padding on content.
+@mixin content($args...) {
+  padding: 0;
+  @each $arg in $args {
+    @if $arg == header {
+      padding-top: 2.5em;
+    }
+    @if $arg == tabbar {
+      padding-bottom: 3.5em;
+    }
+  }
+}
