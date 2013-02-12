@@ -1,3 +1,4 @@
+// define some global button styles.
 .button {
   border-radius: 0.3em;
   @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.4));
@@ -10,6 +11,7 @@
   }
 }
 
+// extend global style and add color information.
 @mixin button($color) {
   border: {
     style: solid;
@@ -18,11 +20,11 @@
   };
   background: $color;
   @include linear-gradient(lighten($color, 10%), darken($color, 10%));
-  @extend .button;
   &:hover, &:focus {
     @include linear-gradient(lighten($color, 15%), darken($color, 5%));
   }
   &:active {
     @include linear-gradient($color, darken($color, 10%));
   }
+  @extend .button;
 }
