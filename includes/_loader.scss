@@ -6,6 +6,9 @@
   height: 52px;
   margin: -26px 0 0 -26px;
   background: black url(/images/loader.gif) center center no-repeat;
+  @include hidpi(1.5) {
+    background: black url(/images/loader@2x.gif) center center no-repeat;
+  }
   background-size: 36px;
   border-radius: 26px;
   opacity: 0.7;
