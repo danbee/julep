@@ -5,14 +5,20 @@
   background: #111;
   text-align: center;
   height: 3.5em;
-  padding-top: 0.2em;
+  padding: 0.15em 0.2em;
   border-top: 1px solid #222;
   @include linear-gradient(#444, #333);
   @include box-shadow(0 -2px 3px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.2));
+  ul {
+    list-style: none;
+  }
   li {
-    display: inline-block;
-    width: 49.2%;
-    height: 3.0em;
+    float: left;
+    padding: 0.1em;
+    height: 100%;
+    &:first-child a {
+      margin-left: 0;
+    }
     a {
       border-radius: 0.3em;
       font-size: 0.7em;
@@ -40,6 +46,9 @@
   }
 }
 
-@mixin tabbar {
+@mixin tabbar($buttons) {
   @extend .tabbar;
+  li {
+    width: (100% / $buttons);
+  }
 }
