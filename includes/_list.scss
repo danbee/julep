@@ -1,23 +1,40 @@
-.list {
+@mixin list-style {
+  background: #ffffff; /* Old browsers */
+  @include linear-gradient(white, #f1f1f1);
+  text-shadow: 0 2px 2px white;
+  border: {
+    style: solid;
+    width: 1px 0;
+    color: #ffffff white #cccccc;
+  }
+  display: block;
+  padding: 0.7em 1em;
+  text-decoration: none;
+}
+
+.list-global {
   list-style: none;
   padding: 0;
+}
+
+.list {
+  @extend .list-global;
   li {
-    a {
-      background: #ffffff; /* Old browsers */
-      @include linear-gradient(white, #f1f1f1);
-      text-shadow: 0 2px 2px white;
-      border: {
-        style: solid;
-        width: 1px 0;
-        color: #ffffff white #cccccc;
-      }
-      display: block;
-      padding: 0.7em 1em;
-      text-decoration: none;
-    }
+    @include list-style;
   }
 }
 
-@mixin list() {
-  @extend .list;
+@mixin list {
+  @extend .link-list;
+}
+
+.link-list {
+  @extend .list-global;
+  li a {
+    @include list-style;
+  }
+}
+
+@mixin link-list {
+  @extend .link-list;
 }
